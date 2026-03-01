@@ -31,7 +31,7 @@ const Sidebar = () => {
             whileHover={{ color: "var(--orange-yellow-crayola)", scale: 1.02 }}
             transition={{ duration: 0.2 }}
           >
-            Full Stack Developer
+            Junior Full Stack Engineer
           </motion.p>
         </div>
 
@@ -85,30 +85,14 @@ const Sidebar = () => {
             </div>
             <div className="contact-info">
               <p className="contact-title">Location</p>
-              <address>Lalitpur, Nepal</address>
+              <address>Kathmandu, Nepal</address>
             </div>
           </li>
         </ul>
 
         <div className="separator"></div>
 
-        <ul className="social-list">
-          <li className="social-item">
-            <a href="#" className="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-          <li className="social-item">
-            <a href="#" className="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-          <li className="social-item">
-            <a href="#" className="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-        </ul>
+
       </div>
     </aside>
   );

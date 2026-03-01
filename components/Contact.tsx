@@ -27,7 +27,7 @@ const Contact = () => {
       <section className="mapbox">
         <figure>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56542.96717960321!2d85.32315195000001!3d27.6574688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19d3cf18ca51%3A0xd10ec3d53656e18f!2sLalitpur!5e0!3m2!1sen!2snp!4v1767883367824!5m2!1sen!2snp"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113032.25301138814!2d85.324!3d27.717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198a307ba3ad%3A0x84e8b7ad6a1dcd35!2sKathmandu!5e0!3m2!1sen!2snp!4v1710834321000!5m2!1sen!2snp"
             width="400"
             height="300"
             loading="lazy"

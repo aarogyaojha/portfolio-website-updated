@@ -5,24 +5,24 @@ import { motion } from "framer-motion";
 const About = () => {
   const services = [
     {
-      title: "Full-Stack Architecture",
-      description: "Designing end-to-end systems that scale. From robust NestJS/Prisma backends to high-performance Next.js frontends.",
-      iconName: "layers-outline"
+      title: "Applied Machine Learning",
+      description: "Designing and evaluating end-to-end ML pipelines — from raw data preprocessing and feature engineering to model training, error analysis, and performance validation on real-world datasets.",
+      iconName: "hardware-chip-outline"
     },
     {
-      title: "API Design & Integration",
-      description: "Crafting clean, documented REST and GraphQL APIs that serve as the backbone for web and mobile platforms.",
-      iconName: "code-slash-outline"
+      title: "Natural Language Processing",
+      description: "Building text classification and sentiment analysis systems using TF-IDF vectorization, logistic regression, and preprocessing pipelines. Experienced with large-scale datasets (1.6M+ records).",
+      iconName: "chatbubbles-outline"
     },
     {
-      title: "Database Performance",
-      description: "Optimizing PostgreSQL and MongoDB schemas for speed and reliability, ensuring your data is always safe and accessible.",
-      iconName: "cube-outline"
+      title: "Scalable Backend & Data Systems",
+      description: "Architecting production-grade APIs and data retrieval pipelines using NestJS, Prisma, PostgreSQL, and Elasticsearch — with a focus on reliability, maintainability, and performance at scale.",
+      iconName: "server-outline"
     },
     {
-      title: "DevOps & Deployment",
-      description: "Automating the path from code to production with Docker, GitHub Actions, and scalable AWS infrastructure.",
-      iconName: "rocket-outline"
+      title: "Research & Problem Solving",
+      description: "Applying rigorous experimental methodology — hypothesis formation, controlled evaluation, comparative analysis — to optimize algorithms and derive actionable insights from complex datasets.",
+      iconName: "analytics-outline"
     }
   ];
 
@@ -34,21 +34,15 @@ const About = () => {
 
       <section className="about-text">
         <p>
-          I am a <strong>Full Stack Engineer</strong> and <strong>CS Graduate Engineer</strong> dedicated to building 
-          high-performance digital solutions that solve real-world business challenges. Based in Lalitpur, Nepal, I bridge 
-          the gap between complex technical requirements and seamless user experiences.
+          I am a <strong>Full Stack Engineer</strong>. Based in Kathmandu, Nepal, I build production-grade systems at the intersection of software engineering and data-driven intelligence.
         </p>
 
         <p>
-          My expertise lies in the <strong>modern JavaScript ecosystem</strong>, utilizing <strong>Next.js</strong>, <strong>NestJS</strong>, 
-          and <strong>Prisma</strong> to build applications that are not just functional, but <em>production-ready</em>. I don't 
-          just write code; I architect systems that are scalable, maintainable, and built with industry best practices in mind.
+          My engineering work spans scalable backend architectures, search and retrieval pipelines, and end-to-end ML systems trained on real-world datasets. At <strong>Ryyft</strong>, I design and maintain data pipelines using <strong>Elasticsearch</strong> and <strong>PostgreSQL</strong> that power live product features. My applied ML projects include a sentiment classification pipeline trained on 1.6 million tweets, a clinical prediction system for diabetes diagnosis, and a voice-enabled recommendation engine — each built with rigorous model evaluation and error analysis.
         </p>
 
         <p>
-          Whether you are a startup looking to launch your MVP or an established business needing a robust internal tool, 
-          I bring a disciplined, engineering-first approach to every project. My goal is to deliver technical excellence 
-          that provides a clear competitive advantage.
+          I am actively seeking <strong>graduate research and teaching opportunities</strong> to advance my work in machine learning, explainable AI, and intelligent systems. If you are a researcher or faculty member working in these areas, I would welcome the opportunity to connect.
         </p>
       </section>
 

@@ -3,25 +3,23 @@
 import { motion } from "framer-motion";
 
 const Resume = () => {
-  const skills = [
-    { name: "NestJS", value: 85 },
-    { name: "Next.js", value: 90 },
-    { name: "Prisma", value: 88 },
-    { name: "PostgreSQL", value: 80 },
-    { name: "MongoDB", value: 75 },
-    { name: "Redis", value: 70 },
-    { name: "React", value: 90 },
-    { name: "Tailwind CSS", value: 95 },
-    { name: "ExpressJS", value: 85 },
-    { name: "Node.js", value: 85 },
-    { name: "TypeScript", value: 90 },
-    { name: "JavaScript", value: 95 },
-    { name: "GraphQL", value: 75 },
-    { name: "Docker", value: 70 },
-    { name: "AWS (S3/EC2/Lambda)", value: 65 },
-    { name: "REST API", value: 90 },
-    { name: "Unit Testing (Jest)", value: 75 },
-    { name: "CI/CD (GitHub Actions)", value: 80 }
+  const skillCategories = [
+    {
+      title: "Machine Learning & AI",
+      skills: ["Python", "Scikit-learn", "NumPy", "Pandas", "Matplotlib", "Seaborn", "Jupyter", "Flask", "Streamlit", "Supervised Learning", "NLP", "TF-IDF", "Sentiment Analysis", "Feature Engineering", "Model Evaluation"]
+    },
+    {
+      title: "Full Stack Development",
+      skills: ["Next.js", "NestJS", "React", "Node.js", "ExpressJS", "TypeScript", "JavaScript", "GraphQL", "REST API", "Prisma"]
+    },
+    {
+      title: "Databases & Infrastructure",
+      skills: ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch", "Docker", "AWS (S3/EC2/Lambda)", "GitHub Actions", "Linux"]
+    },
+    {
+      title: "Mathematics & CS Fundamentals",
+      skills: ["Linear Algebra", "Probability & Statistics", "Data Structures & Algorithms", "Operating Systems", "Computer Networks"]
+    }
   ];
 
   return (
@@ -44,12 +42,13 @@ const Resume = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h4 className="h4 timeline-item-title">CMR Institute of Technology</h4>
-            <span>2021 — 2025</span>
+            <h4 className="h4 timeline-item-title">CMR Institute of Technology — Bachelor of Engineering, Computer Science</h4>
+            <span>2021 – 2025 | CGPA: 8.5 / 10</span>
             <p className="timeline-text">
-              CS Graduate Engineer with a CGPA of 8.5/10. Developed a strong
-              foundation in full-stack development, distributed systems, and modern
-              web architecture.
+              <strong>Relevant Coursework:</strong> Machine Learning, Artificial Intelligence, Data Structures & Algorithms, Operating Systems, Computer Networks, Database Management Systems, Object-Oriented Programming
+            </p>
+            <p className="timeline-text" style={{ marginTop: "10px" }}>
+              <strong>Activities:</strong> Secretary, Rise Technical Club — organized AI/ML workshops and mentored 20+ junior members in technical projects.
             </p>
           </motion.li>
         </ol>
@@ -70,12 +69,11 @@ const Resume = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            <h4 className="h4 timeline-item-title">Full Stack Developer</h4>
-            <h5 className="timeline-item-subtitle">Ryyft</h5>
-            <span>Nov 2025 — Present</span>
+            <h4 className="h4 timeline-item-title">Junior Full Stack Engineer</h4>
+            <h5 className="timeline-item-subtitle">Ryyft · Kathmandu, Nepal</h5>
+            <span>November 2025 – Present</span>
             <p className="timeline-text">
-              Leading the development of scalable web solutions, focusing on 
-              seamless frontend experiences and robust backend performance.
+              Building scalable backend services and data pipelines for production systems. Key contributions include designing RESTful APIs using NestJS and Prisma, integrating Elasticsearch for semantic search and large-scale data retrieval, and applying supervised ML techniques to support predictive product features.
             </p>
           </motion.li>
           <motion.li 
@@ -86,49 +84,56 @@ const Resume = () => {
             transition={{ delay: 0.2 }}
           >
             <h4 className="h4 timeline-item-title">Full Stack Developer Intern</h4>
-            <h5 className="timeline-item-subtitle">Abblor Tech (Remote)</h5>
-            <span>June 2024 — Feb 2025</span>
+            <h5 className="timeline-item-subtitle">Abblor Tech · Bengaluru, India (Remote)</h5>
+            <span>July 2024 – March 2025</span>
             <p className="timeline-text">
-              Contributed to building a responsive, API-integrated web platform
-              using Angular and TypeScript. Collaborated remotely to enhance UI/UX.
+              Developed data-centric administrative tools using Angular and REST APIs. Analyzed backend data to identify usage trends and performance bottlenecks, with findings directly informing product decisions. Built modular backend integrations that improved system maintainability.
             </p>
           </motion.li>
         </ol>
       </section>
 
       <section className="skill">
-        <div className="title-wrapper" style={{ marginBottom: "20px" }}>
-          <h3 className="h3 skills-title" style={{ marginBottom: "5px" }}>My skills</h3>
-          <p style={{ color: "var(--light-gray-70)", fontSize: "var(--fs-8)", fontWeight: "var(--fw-300)" }}>Self-reported proficiency in modern Full Stack ecosystem</p>
+        <div className="title-wrapper" style={{ marginBottom: "25px" }}>
+          <h3 className="h3 skills-title">Technical Skills</h3>
         </div>
         
-        <ul className="skills-list content-card">
-          {skills.map((skill, index) => (
-            <motion.li 
-              className="skills-item" 
-              key={index}
+        <div className="skills-content" style={{ display: "grid", gap: "25px" }}>
+          {skillCategories.map((category, idx) => (
+            <motion.div 
+              key={idx}
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.05 }}
-              whileHover={{ scale: 1.02 }}
+              transition={{ delay: idx * 0.1 }}
             >
-              <div className="title-wrapper">
-                <h5 className="h5">{skill.name}</h5>
-                <data value={skill.value}>{skill.value}%</data>
+              <h4 className="h4" style={{ marginBottom: "12px", color: "var(--orange-yellow-crayola)" }}>{category.title}</h4>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+                {category.skills.map((skill, sIdx) => (
+                  <motion.span 
+                    key={sIdx}
+                    style={{
+                      background: "var(--border-gradient-onyx)",
+                      padding: "5px 15px",
+                      borderRadius: "8px",
+                      fontSize: "var(--fs-7)",
+                      color: "var(--light-gray)",
+                      border: "1px solid var(--jet)",
+                      display: "inline-block"
+                    }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      borderColor: "var(--orange-yellow-crayola)",
+                      color: "var(--white-2)"
+                    }}
+                  >
+                    {skill}
+                  </motion.span>
+                ))}
               </div>
-              <div className="skill-progress-bg">
-                <motion.div
-                  className="skill-progress-fill"
-                  initial={{ width: 0 }}
-                  whileInView={{ width: `${skill.value}%` }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1, delay: 0.5 }}
-                ></motion.div>
-              </div>
-            </motion.li>
+            </motion.div>
           ))}
-        </ul>
+        </div>
       </section>
 
       <div className="download-resumes" style={{
