@@ -149,9 +149,9 @@ const Resume = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <a href="/assets/resumes/full_stack_developer_resume.pdf" download className="form-btn">
+          <a href="/assets/resumes/researchlevelcv_final.pdf" download className="form-btn">
             <ion-icon name="download-outline"></ion-icon>
-            <span>Download Full Stack CV</span>
+            <span>Download Resume</span>
           </a>
         </motion.div>
       </div>
