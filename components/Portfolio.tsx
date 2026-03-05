@@ -12,6 +12,20 @@ const Portfolio = () => {
 
   const projects = [
     {
+      title: "Aura",
+      category: "Web development",
+      image: "/assets/images/aura.png",
+      url: "https://github.com/aarogyaojha/Aura",
+      description: "A modern, next-generation anonymous social platform featuring threaded discussions, real-time interactions, and AI-powered content moderation. Built with the MERN stack."
+    },
+    {
+      title: "Aero UI",
+      category: "Web development",
+      image: "/assets/images/aero-ui.png",
+      url: "https://github.com/aarogyaojha/component-library",
+      description: "A high-performance, accessible, and premium UI component library built with Next.js 15+, TypeScript, and Tailwind CSS v4. Designed for speed, aesthetics, and seamless developer experience."
+    },
+    {
       title: "AuthProject",
       category: "Web development",
       image: "/assets/images/auth-project-thumbnail.png",
