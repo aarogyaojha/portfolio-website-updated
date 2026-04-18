@@ -25,13 +25,15 @@ const Sidebar = () => {
         </figure>
 
         <div className="info-content">
-          <h1 className="name" title="Aarogya Ojha">Aarogya Ojha</h1>
-          <motion.p 
+          <h1 className="name" title="Aarogya Ojha">
+            Aarogya Ojha
+          </h1>
+          <motion.p
             className="title cursor-default"
             whileHover={{ color: "var(--orange-yellow-crayola)", scale: 1.02 }}
             transition={{ duration: 0.2 }}
           >
-            Junior Full Stack Engineer
+            Full Stack Engineer
           </motion.p>
         </div>
 
@@ -91,8 +93,6 @@ const Sidebar = () => {
         </ul>
 
         <div className="separator"></div>
-
-
       </div>
     </aside>
   );

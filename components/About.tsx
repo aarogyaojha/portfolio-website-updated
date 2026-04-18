@@ -5,25 +5,29 @@ import { motion } from "framer-motion";
 const About = () => {
   const services = [
     {
-      title: "Applied Machine Learning",
-      description: "Designing and evaluating end-to-end ML pipelines — from raw data preprocessing and feature engineering to model training, error analysis, and performance validation on real-world datasets.",
-      iconName: "hardware-chip-outline"
+      title: "Backend APIs & System Design",
+      description:
+        "Building production-grade REST APIs and backend systems using NestJS, Prisma, and PostgreSQL — with deliberate attention to auth security, role-based access, and API design that doesn't require rewrites six months later.",
+      iconName: "server-outline",
     },
     {
-      title: "Natural Language Processing",
-      description: "Building text classification and sentiment analysis systems using TF-IDF vectorization, logistic regression, and preprocessing pipelines. Experienced with large-scale datasets (1.6M+ records).",
-      iconName: "chatbubbles-outline"
+      title: "Full-Stack Web Applications",
+      description:
+        "End-to-end delivery from database schema to deployed frontend. Next.js 15, React, TypeScript, Tailwind CSS — building complete products, not just the backend or just the UI.",
+      iconName: "code-slash-outline",
     },
     {
-      title: "Scalable Backend & Data Systems",
-      description: "Architecting production-grade APIs and data retrieval pipelines using NestJS, Prisma, PostgreSQL, and Elasticsearch — with a focus on reliability, maintainability, and performance at scale.",
-      iconName: "server-outline"
+      title: "ML Integration into Products",
+      description:
+        "Integrating trained ML models into backend workflows as real product features — not notebook demos. Experience deploying classifiers as independent services with clean APIs consumed by the main backend.",
+      iconName: "hardware-chip-outline",
     },
     {
-      title: "Research & Problem Solving",
-      description: "Applying rigorous experimental methodology — hypothesis formation, controlled evaluation, comparative analysis — to optimize algorithms and derive actionable insights from complex datasets.",
-      iconName: "analytics-outline"
-    }
+      title: "Auth & Security Infrastructure",
+      description:
+        "JWT with refresh token rotation, cryptographic OTP, HttpOnly cookies, role-based field-level access control, and forensic audit logging. Auth that holds up under scrutiny, not just tutorial-level implementation.",
+      iconName: "shield-checkmark-outline",
+    },
   ];
 
   return (
@@ -34,34 +38,52 @@ const About = () => {
 
       <section className="about-text">
         <p>
-          I am a <strong>Full Stack Engineer</strong>. Based in Kathmandu, Nepal, I build production-grade systems at the intersection of software engineering and data-driven intelligence.
+          I am a <strong>Full Stack Engineer</strong> based in Kathmandu, Nepal.
+          I design and ship production backend systems — REST APIs, auth
+          infrastructure, real-time services — and integrate ML models into
+          product workflows.
         </p>
 
         <p>
-          My engineering work spans scalable backend architectures, search and retrieval pipelines, and end-to-end ML systems trained on real-world datasets. At <strong>Ryyft</strong>, I design and maintain data pipelines using <strong>Elasticsearch</strong> and <strong>PostgreSQL</strong> that power live product features. My applied ML projects include a sentiment classification pipeline trained on 1.6 million tweets, a clinical prediction system for diabetes diagnosis, and a voice-enabled recommendation engine — each built with rigorous model evaluation and error analysis.
+          I currently work as an Associate Software Developer at{" "}
+          <strong>Conceptual Frame</strong>, building client-facing web
+          applications with PHP and Laravel. Previously at{" "}
+          <strong>Ryyft</strong>, I designed and maintained NestJS APIs and
+          PostgreSQL pipelines serving real user traffic, and integrated
+          supervised ML models into backend workflows for predictive product
+          features.
         </p>
 
         <p>
-          I am actively seeking <strong>graduate research and teaching opportunities</strong> to advance my work in machine learning, explainable AI, and intelligent systems. If you are a researcher or faculty member working in these areas, I would welcome the opportunity to connect.
+          I take on freelance projects on evenings and weekends — backend APIs,
+          full-stack web apps, and ML integration work. If you have a project
+          that needs careful backend architecture and reliable delivery, I would
+          be glad to hear about it.
         </p>
       </section>
 
       <section className="service">
-        <h3 className="h3 service-title">Expertise & Solutions</h3>
+        <h3 className="h3 service-title">What I can build for you</h3>
         <ul className="service-list">
           {services.map((service, index) => (
-            <motion.li 
-              className="service-item cursor-pointer" 
+            <motion.li
+              className="service-item cursor-pointer"
               key={index}
-              whileHover={{ 
+              whileHover={{
                 scale: 1.02,
                 boxShadow: "0 10px 30px -10px rgba(0, 255, 234, 0.2)",
-                borderColor: "var(--orange-yellow-crayola)"
+                borderColor: "var(--orange-yellow-crayola)",
               }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
               <div className="service-icon-box">
-                <ion-icon name={service.iconName} style={{ fontSize: "40px", color: "var(--orange-yellow-crayola)" }}></ion-icon>
+                <ion-icon
+                  name={service.iconName}
+                  style={{
+                    fontSize: "40px",
+                    color: "var(--orange-yellow-crayola)",
+                  }}
+                ></ion-icon>
               </div>
               <div className="service-content-box">
                 <h4 className="h4 service-item-title">{service.title}</h4>

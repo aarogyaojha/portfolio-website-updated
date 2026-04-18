@@ -5,21 +5,72 @@ import { motion } from "framer-motion";
 const Resume = () => {
   const skillCategories = [
     {
-      title: "Machine Learning & AI",
-      skills: ["Python", "Scikit-learn", "NumPy", "Pandas", "Matplotlib", "Seaborn", "Jupyter", "Flask", "Streamlit", "Supervised Learning", "NLP", "TF-IDF", "Sentiment Analysis", "Feature Engineering", "Model Evaluation"]
+      title: "Backend & APIs",
+      skills: [
+        "NestJS",
+        "Node.js",
+        "PHP",
+        "Laravel",
+        "REST API",
+        "Prisma ORM",
+        "Passport.js",
+        "Swagger / OpenAPI",
+        "ExpressJS",
+        "GraphQL",
+      ],
     },
     {
-      title: "Full Stack Development",
-      skills: ["Next.js", "NestJS", "React", "Node.js", "ExpressJS", "TypeScript", "JavaScript", "GraphQL", "REST API", "Prisma"]
+      title: "Frontend",
+      skills: [
+        "Next.js 15",
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "Angular",
+        "Tailwind CSS",
+        "Shadcn/UI",
+        "Framer Motion",
+      ],
+    },
+    {
+      title: "Auth & Security",
+      skills: [
+        "JWT",
+        "Refresh Token Rotation",
+        "Cryptographic OTP",
+        "HttpOnly Cookies",
+        "RBAC",
+      ],
     },
     {
       title: "Databases & Infrastructure",
-      skills: ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch", "Docker", "AWS (S3/EC2/Lambda)", "GitHub Actions", "Linux"]
+      skills: [
+        "PostgreSQL",
+        "MongoDB",
+        "Redis",
+        "Elasticsearch",
+        "Docker",
+        "Docker Compose",
+        "GitHub Actions",
+        "AWS",
+        "Linux",
+      ],
     },
     {
-      title: "Mathematics & CS Fundamentals",
-      skills: ["Linear Algebra", "Probability & Statistics", "Data Structures & Algorithms", "Operating Systems", "Computer Networks"]
-    }
+      title: "Machine Learning & Data",
+      skills: [
+        "Python",
+        "PyTorch",
+        "DistilBERT",
+        "Scikit-learn",
+        "Pandas",
+        "NumPy",
+        "Flask",
+        "Streamlit",
+        "TF-IDF",
+        "NLP",
+      ],
+    },
   ];
 
   return (
@@ -36,19 +87,25 @@ const Resume = () => {
           <h3 className="h3">Education</h3>
         </div>
         <ol className="timeline-list">
-          <motion.li 
+          <motion.li
             className="timeline-item"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h4 className="h4 timeline-item-title">CMR Institute of Technology — Bachelor of Engineering, Computer Science</h4>
+            <h4 className="h4 timeline-item-title">
+              CMR Institute of Technology — B.E. Computer Science
+            </h4>
             <span>2021 – 2025 | CGPA: 8.5 / 10</span>
             <p className="timeline-text">
-              <strong>Relevant Coursework:</strong> Machine Learning, Artificial Intelligence, Data Structures & Algorithms, Operating Systems, Computer Networks, Database Management Systems, Object-Oriented Programming
+              Relevant coursework: Machine Learning, Artificial Intelligence,
+              Data Structures & Algorithms, Operating Systems, Computer
+              Networks, DBMS, OOP.
             </p>
             <p className="timeline-text" style={{ marginTop: "10px" }}>
-              <strong>Activities:</strong> Secretary, Rise Technical Club — organized AI/ML workshops and mentored 20+ junior members in technical projects.
+              Secretary, Rise Technical Club — organized AI/ML workshops,
+              mentored 20+ junior members. Hackathon finalist, Shristi 2024
+              (Bengaluru) — awarded ₹50,000 for ML-powered solution.
             </p>
           </motion.li>
         </ol>
@@ -62,32 +119,65 @@ const Resume = () => {
           <h3 className="h3">Experience</h3>
         </div>
         <ol className="timeline-list">
-          <motion.li 
+          <motion.li
             className="timeline-item"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            <h4 className="h4 timeline-item-title">Junior Full Stack Engineer</h4>
-            <h5 className="timeline-item-subtitle">Ryyft · Kathmandu, Nepal</h5>
-            <span>November 2025 – Present</span>
+            <h4 className="h4 timeline-item-title">
+              Associate Software Developer (Full Stack)
+            </h4>
+            <h5 className="timeline-item-subtitle">
+              Conceptual Frame · Kathmandu, Nepal
+            </h5>
+            <span>April 2026 – Present</span>
             <p className="timeline-text">
-              Building scalable backend services and data pipelines for production systems. Key contributions include designing RESTful APIs using NestJS and Prisma, integrating Elasticsearch for semantic search and large-scale data retrieval, and applying supervised ML techniques to support predictive product features.
+              Building and maintaining client-facing web applications using PHP
+              and Laravel. Leading technical design decisions, designing system
+              architecture, and developing RESTful APIs from requirements
+              through to deployment.
             </p>
           </motion.li>
-          <motion.li 
+          <motion.li
             className="timeline-item"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <h4 className="h4 timeline-item-title">Full Stack Developer Intern</h4>
-            <h5 className="timeline-item-subtitle">Abblor Tech · Bengaluru, India (Remote)</h5>
+            <h4 className="h4 timeline-item-title">
+              Junior Full Stack Engineer
+            </h4>
+            <h5 className="timeline-item-subtitle">Ryyft · Kathmandu, Nepal</h5>
+            <span>November 2025 – April 2026</span>
+            <p className="timeline-text">
+              Designed and shipped production-grade RESTful APIs using NestJS,
+              Prisma, and PostgreSQL serving real user traffic. Reduced API
+              latency through performance profiling and query optimization.
+              Integrated supervised ML models into backend workflows to support
+              predictive product features.
+            </p>
+          </motion.li>
+          <motion.li
+            className="timeline-item"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+          >
+            <h4 className="h4 timeline-item-title">
+              Full Stack Developer Intern
+            </h4>
+            <h5 className="timeline-item-subtitle">
+              Abblor Tech · Bengaluru, India
+            </h5>
             <span>July 2024 – March 2025</span>
             <p className="timeline-text">
-              Developed data-centric administrative tools using Angular and REST APIs. Analyzed backend data to identify usage trends and performance bottlenecks, with findings directly informing product decisions. Built modular backend integrations that improved system maintainability.
+              Built data-centric admin tools using Angular and REST APIs.
+              Developed modular backend integrations that improved system
+              maintainability and reduced coupling between services.
             </p>
           </motion.li>
         </ol>
@@ -97,20 +187,31 @@ const Resume = () => {
         <div className="title-wrapper" style={{ marginBottom: "25px" }}>
           <h3 className="h3 skills-title">Technical Skills</h3>
         </div>
-        
-        <div className="skills-content" style={{ display: "grid", gap: "25px" }}>
+
+        <div
+          className="skills-content"
+          style={{ display: "grid", gap: "25px" }}
+        >
           {skillCategories.map((category, idx) => (
-            <motion.div 
+            <motion.div
               key={idx}
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
             >
-              <h4 className="h4" style={{ marginBottom: "12px", color: "var(--orange-yellow-crayola)" }}>{category.title}</h4>
+              <h4
+                className="h4"
+                style={{
+                  marginBottom: "12px",
+                  color: "var(--orange-yellow-crayola)",
+                }}
+              >
+                {category.title}
+              </h4>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
                 {category.skills.map((skill, sIdx) => (
-                  <motion.span 
+                  <motion.span
                     key={sIdx}
                     style={{
                       background: "var(--border-gradient-onyx)",
@@ -119,12 +220,12 @@ const Resume = () => {
                       fontSize: "var(--fs-7)",
                       color: "var(--light-gray)",
                       border: "1px solid var(--jet)",
-                      display: "inline-block"
+                      display: "inline-block",
                     }}
-                    whileHover={{ 
+                    whileHover={{
                       scale: 1.05,
                       borderColor: "var(--orange-yellow-crayola)",
-                      color: "var(--white-2)"
+                      color: "var(--white-2)",
                     }}
                   >
                     {skill}
@@ -136,32 +237,29 @@ const Resume = () => {
         </div>
       </section>
 
-      <div className="download-resumes" style={{
-        textAlign: "center",
-        marginTop: "2rem",
-        display: "flex",
-        justifyContent: "center",
-        gap: "2rem",
-        flexWrap: "wrap",
-      }}>
-        <motion.div 
+      <div
+        className="download-resumes"
+        style={{
+          textAlign: "center",
+          marginTop: "2rem",
+          display: "flex",
+          justifyContent: "center",
+          gap: "2rem",
+          flexWrap: "wrap",
+        }}
+      >
+        <motion.div
           className="download-resume"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <a href="/assets/resumes/researchlevelcv_final.pdf" download className="form-btn">
+          <a
+            href="/assets/resumes/Full_Stack_Engineer.pdf"
+            download
+            className="form-btn"
+          >
             <ion-icon name="download-outline"></ion-icon>
-            <span>Research CV</span>
-          </a>
-        </motion.div>
-        <motion.div 
-          className="download-resume"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <a href="/assets/resumes/Full_Stack_Engineer.pdf" download className="form-btn">
-            <ion-icon name="download-outline"></ion-icon>
-            <span>Full Stack Resume</span>
+            <span>Resume</span>
           </a>
         </motion.div>
       </div>
