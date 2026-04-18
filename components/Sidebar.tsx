@@ -90,6 +90,40 @@ const Sidebar = () => {
               <address>Kathmandu, Nepal</address>
             </div>
           </li>
+
+          <li className="contact-item">
+            <div className="icon-box">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </div>
+            <div className="contact-info">
+              <p className="contact-title">LinkedIn</p>
+              <a
+                href="https://www.linkedin.com/in/aarogya-ojha/"
+                className="contact-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn Profile
+              </a>
+            </div>
+          </li>
+
+          <li className="contact-item">
+            <div className="icon-box">
+              <ion-icon name="logo-github"></ion-icon>
+            </div>
+            <div className="contact-info">
+              <p className="contact-title">GitHub</p>
+              <a
+                href="https://github.com/aarogyaojha"
+                className="contact-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub Profile
+              </a>
+            </div>
+          </li>
         </ul>
 
         <div className="separator"></div>
