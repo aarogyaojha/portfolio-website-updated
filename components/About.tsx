@@ -17,9 +17,9 @@ const About = () => {
       iconName: "code-slash-outline",
     },
     {
-      title: "ML Integration into Products",
+      title: "ML Integration & NLP Research",
       description:
-        "Integrating trained ML models into backend workflows as real product features — not notebook demos. Experience deploying classifiers as independent services with clean APIs consumed by the main backend.",
+        "Integrating trained ML models into backend workflows as real product features. Active NLP researcher — currently studying how transformer models behave under domain shift compared to classical baselines.",
       iconName: "hardware-chip-outline",
     },
     {
@@ -38,28 +38,35 @@ const About = () => {
 
       <section className="about-text">
         <p>
-          I am a <strong>Full Stack Engineer</strong> based in Kathmandu, Nepal.
-          I design and ship production backend systems — REST APIs, auth
-          infrastructure, real-time services — and integrate ML models into
-          product workflows.
+          I'm Aarogya — a Full Stack Engineer based in Kathmandu 
+          who works across TypeScript, PHP, and Python depending 
+          on what the problem needs.
         </p>
 
         <p>
-          I currently work as an Associate Software Developer at{" "}
-          <strong>Conceptual Frame</strong>, building client-facing web
-          applications with PHP and Laravel. Previously at{" "}
-          <strong>Ryyft</strong>, I designed and maintained NestJS APIs and
-          PostgreSQL pipelines serving real user traffic, and integrated
-          supervised ML models into backend workflows for predictive product
-          features.
+          I build production backend systems by day and do NLP 
+          research on the side. This is where I write about both.
         </p>
 
-        <p>
-          I take on freelance projects on evenings and weekends — backend APIs,
-          full-stack web apps, and ML integration work. If you have a project
-          that needs careful backend architecture and reliable delivery, I would
-          be glad to hear about it.
-        </p>
+        <div style={{ marginTop: "20px" }}>
+          <a
+            href="/assets/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="form-btn"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "10px",
+              padding: "12px 24px",
+              width: "max-content",
+              textDecoration: "none"
+            }}
+          >
+            <ion-icon name="download-outline"></ion-icon>
+            <span>Download Resume</span>
+          </a>
+        </div>
       </section>
 
       <section className="service">

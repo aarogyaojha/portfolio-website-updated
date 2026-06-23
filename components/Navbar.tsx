@@ -6,7 +6,7 @@ interface NavbarProps {
 }
 
 const Navbar = ({ activeTab, setActiveTab }: NavbarProps) => {
-  const tabs = ["About", "Resume", "Portfolio", "Contact"];
+  const tabs = ["About", "Portfolio", "Blog", "Contact"];
 
   return (
     <nav className="navbar">

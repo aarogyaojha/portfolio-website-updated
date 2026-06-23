@@ -4,8 +4,8 @@ import { useState } from "react";
 import Sidebar from "@/components/Sidebar";
 import Navbar from "@/components/Navbar";
 import About from "@/components/About";
-import Resume from "@/components/Resume";
 import Portfolio from "@/components/Portfolio";
+import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
 
 export default function Home() {
@@ -15,10 +15,10 @@ export default function Home() {
     switch (activeTab) {
       case "About":
         return <About />;
-      case "Resume":
-        return <Resume />;
       case "Portfolio":
         return <Portfolio />;
+      case "Blog":
+        return <Blog />;
       case "Contact":
         return <Contact />;
       default:

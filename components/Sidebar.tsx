@@ -32,8 +32,9 @@ const Sidebar = () => {
             className="title cursor-default"
             whileHover={{ color: "var(--orange-yellow-crayola)", scale: 1.02 }}
             transition={{ duration: 0.2 }}
+            style={{ fontSize: "12px", padding: "5px 10px" }}
           >
-            Full Stack Engineer
+            Full Stack Engineer | Polyglot Dev | NLP Researcher
           </motion.p>
         </div>
 
@@ -59,27 +60,7 @@ const Sidebar = () => {
             </div>
           </li>
 
-          <li className="contact-item">
-            <div className="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-            <div className="contact-info">
-              <p className="contact-title">Phone</p>
-              <a href="tel:+9779815929233" className="contact-link">
-                +977 9815929233
-              </a>
-            </div>
-          </li>
 
-          <li className="contact-item">
-            <div className="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-            <div className="contact-info">
-              <p className="contact-title">Birthday</p>
-              <time dateTime="2004-07-25">July 25, 2004</time>
-            </div>
-          </li>
 
           <li className="contact-item">
             <div className="icon-box">
@@ -121,6 +102,23 @@ const Sidebar = () => {
                 rel="noopener noreferrer"
               >
                 GitHub Profile
+              </a>
+            </div>
+          </li>
+
+          <li className="contact-item">
+            <div className="icon-box">
+              <ion-icon name="logo-rss"></ion-icon>
+            </div>
+            <div className="contact-info">
+              <p className="contact-title">Blog</p>
+              <a
+                href="https://blog.aarogyaojha.com.np"
+                className="contact-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Hashnode
               </a>
             </div>
           </li>

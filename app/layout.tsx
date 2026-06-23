@@ -3,8 +3,8 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Aarogya Ojha",
-  description: "Aarogya Ojha's Portfolio - Full Stack Developer",
+  title: "Aarogya Ojha — Full Stack Engineer & NLP Researcher",
+  description: "Full Stack Engineer based in Kathmandu working across TypeScript, PHP, and Python. NLP researcher. Building production systems and writing about both.",
 };
 
 export default function RootLayout({

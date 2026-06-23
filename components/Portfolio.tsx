@@ -10,15 +10,37 @@ const Portfolio = () => {
 
   const categories = [
     "All",
-    "Web development",
-    "Machine learning",
-    "Mobile applications",
+    "Research",
+    "Case Studies",
+    "Open Source",
+    "ML Models",
+    "Mobile",
   ];
 
   const projects = [
     {
+      title: "Cross-Domain Sentiment Analysis",
+      category: "Research",
+      image: "/assets/images/sentiment-analyzer.png",
+      url: "https://github.com/aarogyaojha/sentiment_analysis",
+      badge: "NLPCC 2026 Submission",
+      caseStudy: {
+        problem:
+          "In-domain benchmark accuracy is the standard basis for choosing between ML models — but it's misleading when the deployment domain differs from the training domain. A model that wins on Twitter data may not win on product reviews or news.",
+        built:
+          "A rigorous cross-domain benchmark comparing TF-IDF + Logistic Regression against fine-tuned DistilBERT. Both models trained on 1.6M Twitter tweets (Sentiment140) and evaluated on Twitter (in-domain) and IMDB movie reviews (out-of-domain) without any retraining on the target domain. Statistical significance tested with McNemar's test.",
+        decisions: [
+          "DistilBERT outperforms TF-IDF+LR by 7.1 points in-domain (McNemar χ² = 1123.2, p < 0.001)",
+          "DistilBERT degrades 2.3× faster under domain shift — 12.3 accuracy points lost vs 5.4 for TF-IDF+LR",
+          "On IMDB, the gap disappears entirely — statistical parity (χ² = 1.526, p = 0.217)",
+          "Precision/recall asymmetry documented: DistilBERT over-triggers on positive words in negative review setups",
+          "Practical implication: the cheaper GPU-free TF-IDF pipeline is statistically indistinguishable from DistilBERT under domain shift",
+        ],
+      },
+    },
+    {
       title: "AuthProject",
-      category: "Web development",
+      category: "Case Studies",
       image: "/assets/images/auth-project-thumbnail.png",
       url: "https://github.com/aarogyaojha/AuthProject",
       caseStudy: {
@@ -36,7 +58,7 @@ const Portfolio = () => {
     },
     {
       title: "Real Estate Listing Engine",
-      category: "Web development",
+      category: "Case Studies",
       image: "/assets/images/project-7.png",
       url: "https://github.com/aarogyaojha/real-estate-listing",
       caseStudy: {
@@ -54,8 +76,34 @@ const Portfolio = () => {
       },
     },
     {
+      title: "RateLane",
+      category: "Case Studies",
+      image: "/assets/images/project-7.png",
+      url: "https://github.com/aarogyaojha/ratelane",
+      description:
+        "Freight and logistics platform case study placeholder. Currently in development.",
+    },
+    {
+      title: "Aura",
+      category: "Case Studies",
+      image: "/assets/images/aura.png",
+      url: "https://github.com/aarogyaojha/Aura",
+      caseStudy: {
+        problem:
+          "Content moderation on social platforms is usually an afterthought — either manual review queues that don't scale, or a third-party service bolted onto the main backend with tight coupling that makes retraining or swapping models painful.",
+        built:
+          "A full-stack anonymous social platform where the ML content moderation classifier runs as an independent Docker service — isolated from the Node.js backend, independently deployable, and retrainable without touching the main application. The three services (React client, Express backend, Python classifier) are orchestrated with Docker Compose.",
+        decisions: [
+          "Separate classifier service — Python, Flask, and scikit-learn dependencies isolated from the Node.js runtime",
+          "Context-aware auth — login verification considers IP, location, and device metadata, not just credentials",
+          "GitHub Actions CI/CD — automated build and test pipeline on every push",
+          "Socket.io for real-time interactions — threaded discussions with hot/new/top/rising feed sorting",
+        ],
+      },
+    },
+    {
       title: "Cybership",
-      category: "Web development",
+      category: "Case Studies",
       image: "/assets/images/aura.png",
       url: "https://github.com/aarogyaojha/cybership",
       caseStudy: {
@@ -73,77 +121,32 @@ const Portfolio = () => {
       },
     },
     {
-      title: "Aura",
-      category: "Web development",
-      image: "/assets/images/aura.png",
-      url: "https://github.com/aarogyaojha/Aura",
-      caseStudy: {
-        problem:
-          "Content moderation on social platforms is usually an afterthought — either manual review queues that don't scale, or a third-party service bolted onto the main backend with tight coupling that makes retraining or swapping models painful.",
-        built:
-          "A full-stack anonymous social platform where the ML content moderation classifier runs as an independent Docker service — isolated from the Node.js backend, independently deployable, and retrainable without touching the main application. The three services (React client, Express backend, Python classifier) are orchestrated with Docker Compose.",
-        decisions: [
-          "Separate classifier service — Python, Flask, and scikit-learn dependencies isolated from the Node.js runtime",
-          "Context-aware auth — login verification considers IP, location, and device metadata, not just credentials",
-          "GitHub Actions CI/CD — automated build and test pipeline on every push",
-          "Socket.io for real-time interactions — threaded discussions with hot/new/top/rising feed sorting",
-        ],
-      },
-    },
-    {
       title: "Aero UI",
-      category: "Web development",
+      category: "Open Source",
       image: "/assets/images/aero-ui.png",
       url: "https://github.com/aarogyaojha/component-library",
       description:
         "Open-source React component library with Storybook 8, Vitest unit tests, Radix UI primitives, and a custom CLI for scaffolding components directly into any project. Built on Next.js 15, TypeScript, and Tailwind CSS v4.",
     },
     {
-      title: "Stock Portfolio App",
-      category: "Web development",
-      image: "/assets/images/project-7.png",
-      url: "https://github.com/aarogyaojha/stock-portfolio-app",
-      description:
-        "A modern React-based stock portfolio management application built with TypeScript, Zustand, and Recharts. Features interactive charts, real-time gain/loss calculations, portfolio CRUD, and local storage persistence.",
-    },
-    {
-      title: "Cross-Domain Sentiment Analysis",
-      category: "Machine learning",
-      image: "/assets/images/sentiment-analyzer.png",
-      url: "https://github.com/aarogyaojha/sentiment_analysis",
-      caseStudy: {
-        problem:
-          "In-domain benchmark accuracy is the standard basis for choosing between ML models — but it's misleading when the deployment domain differs from the training domain. A model that wins on Twitter data may not win on product reviews or news.",
-        built:
-          "A rigorous cross-domain benchmark comparing TF-IDF + Logistic Regression against fine-tuned DistilBERT. Both models trained on 1.6M Twitter tweets (Sentiment140) and evaluated on Twitter (in-domain) and IMDB movie reviews (out-of-domain) without any retraining on the target domain. Statistical significance tested with McNemar's test.",
-        decisions: [
-          "DistilBERT outperforms TF-IDF+LR by 7.1 points in-domain (McNemar χ² = 1123.2, p < 0.001)",
-          "DistilBERT degrades 2.3× faster under domain shift — 12.3 accuracy points lost vs 5.4 for TF-IDF+LR",
-          "On IMDB, the gap disappears entirely — statistical parity (χ² = 1.526, p = 0.217)",
-          "Precision/recall asymmetry documented: DistilBERT over-triggers on positive words in negative review setups",
-          "Practical implication: the cheaper GPU-free TF-IDF pipeline is statistically indistinguishable from DistilBERT under domain shift",
-        ],
-      },
-    },
-    {
-      title: "Diabetes Prediction",
-      category: "Machine learning",
-      image: "/assets/images/diabetes-prediction.png",
-      url: "https://github.com/aarogyaojha/diabetes-prediction",
-      description:
-        "Clinical ML system using the Pima Indians Diabetes Dataset. Features comprehensive EDA, data visualization, and KNN classification with confusion matrix evaluation to predict diabetes from diagnostic measurements.",
-    },
-    {
       title: "X Sentiment Analyzer",
-      category: "Machine learning",
+      category: "ML Models",
       image: "/assets/images/sentiment-analyzer.png",
       url: "https://github.com/aarogyaojha/x-sentiment-analyzer",
       description:
         "End-to-end Twitter sentiment analysis pipeline on the Sentiment140 dataset. Covers text preprocessing (regex cleaning, stemming), TF-IDF vectorization, logistic regression training, and model persistence.",
     },
     {
+      title: "Diabetes Prediction",
+      category: "ML Models",
+      image: "/assets/images/diabetes-prediction.png",
+      url: "https://github.com/aarogyaojha/diabetes-prediction",
+      description:
+        "Clinical ML system using the Pima Indians Diabetes Dataset. Features comprehensive EDA, data visualization, and KNN classification with confusion matrix evaluation to predict diabetes from diagnostic measurements.",
+    },
+    {
       title: "Car Price Predictor",
-      category: "Machine learning",
+      category: "ML Models",
       image: "/assets/images/car-price-predictor.png",
       url: "https://github.com/aarogyaojha/Car-Price-Predictor",
       description:
@@ -151,7 +154,7 @@ const Portfolio = () => {
     },
     {
       title: "SMS Spam Classifier",
-      category: "Machine learning",
+      category: "ML Models",
       image: "/assets/images/sms-spam-classifier.png",
       url: "https://github.com/aarogyaojha/sms-spam-classifier",
       description:
@@ -159,7 +162,7 @@ const Portfolio = () => {
     },
     {
       title: "Movie Recommender System",
-      category: "Machine learning",
+      category: "ML Models",
       image: "/assets/images/movie-recommender.png",
       url: "https://github.com/aarogyaojha/movie-recommender-system",
       description:
@@ -167,7 +170,7 @@ const Portfolio = () => {
     },
     {
       title: "AI Chatbot",
-      category: "Mobile applications",
+      category: "Mobile",
       image: "/assets/images/ai_chatbot_project.png",
       url: "https://github.com/aarogyaojha/ai_chatbot",
       description:
@@ -175,7 +178,7 @@ const Portfolio = () => {
     },
     {
       title: "Todoey",
-      category: "Mobile applications",
+      category: "Mobile",
       image: "/assets/images/todoey.png",
       url: "https://github.com/aarogyaojha/todoey",
       description:
@@ -183,7 +186,7 @@ const Portfolio = () => {
     },
     {
       title: "BMI Calculator",
-      category: "Mobile applications",
+      category: "Mobile",
       image: "/assets/images/bmi-calc.png",
       url: "https://github.com/aarogyaojha/bmi_calculator_flutter",
       description:
@@ -191,7 +194,7 @@ const Portfolio = () => {
     },
     {
       title: "Quizzler",
-      category: "Mobile applications",
+      category: "Mobile",
       image: "/assets/images/quizzler.png",
       url: "https://github.com/aarogyaojha/quizzler_flutter",
       description:
@@ -255,7 +258,7 @@ const Portfolio = () => {
 
         <ul className="project-list">
           {filteredProjects.map((project, index) => {
-            const isML = project.category === "Machine learning";
+            const isML = project.category === "ML Models" || project.category === "Research";
             const isCaseStudy = hasCaseStudy(project);
 
             return (
@@ -315,7 +318,7 @@ const Portfolio = () => {
                         letterSpacing: "0.5px",
                       }}
                     >
-                      ML MODEL
+                      {project.badge ? project.badge : "ML MODEL"}
                     </div>
                   )}
                   {isCaseStudy && !isML && (
