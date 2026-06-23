@@ -34,7 +34,7 @@ const Sidebar = () => {
             transition={{ duration: 0.2 }}
             style={{ fontSize: "12px", padding: "5px 10px" }}
           >
-            Full Stack Engineer | Polyglot Dev | NLP Researcher
+            Full Stack Engineer | Polyglot Dev<br></br>| NLP Researcher
           </motion.p>
         </div>
 
