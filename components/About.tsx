@@ -50,7 +50,7 @@ const About = () => {
 
         <div style={{ marginTop: "20px" }}>
           <a
-            href="/assets/resume.pdf"
+            href="/assets/resumes/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="form-btn"
