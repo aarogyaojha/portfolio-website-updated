@@ -20,7 +20,7 @@ const Blog = () => {
       try {
         const query = `
           {
-            publication(host: "blog.aarogyaojha.com.np") {
+            publication(host: "aarogyaojha.hashnode.com") {
               posts(first: 3) {
                 edges {
                   node {
