@@ -2,23 +2,23 @@
 
 Welcome to my professional portfolio website codebase. This project showcases my skills, experience, and projects in a modern, responsive interface built with the latest web technologies.
 
-## 🚀 Live Demo
+## Live Demo
 Check out the live website here: **[https://www.aarogyaojha.com.np/](https://www.aarogyaojha.com.np/)**
 
-## ✨ Features
+## Features
 - **Modern UI/UX**: Clean and professional design.
 - **Responsive Design**: Optimized for all devices—mobile, tablet, and desktop.
 - **Dynamic Animations**: Smooth transitions powered by Framer Motion.
 - **Project Showcase**: Detailed view of my latest work.
 
-## 🛠️ Built With
+## Built With
 - **[Next.js](https://nextjs.org/)** - React Framework for the Web.
 - **[Framer Motion](https://www.framer.com/motion/)** - Animation library for React.
 - **[Lucide React](https://lucide.dev/)** - Beautiful & consistent icon toolkit.
 - **Tailwind CSS** - For modern, utility-first styling.
 - **TypeScript** - For type-safe development.
 
-## 📥 Getting Started
+## Getting Started
 
 ### Prerequisites
 - [Node.js](https://nodejs.org/) (v18 or later)
